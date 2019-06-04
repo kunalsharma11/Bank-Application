@@ -1,5 +1,5 @@
 package bank.account.application;
 
-public class Account {
+public abstract class Account implements IBaseInterestRate{
 
 }

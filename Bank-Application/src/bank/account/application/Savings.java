@@ -1,5 +1,5 @@
 package bank.account.application;
 
-public class Savings {
+public class Savings extends Account{
 
 }
