@@ -16,9 +16,9 @@ public abstract class Account implements IBaseInterestRate{
 		this.accountHolder = accountHolder;
 		this.SIN = SIN;
 		this.accountBalance = initialDeposit;
-	
-		System.out.println("Name: " +accountHolder +" SIN: " +SIN+" balance: " +initialDeposit);
-		
+//	
+//		System.out.println("Name: " +accountHolder +" SIN: " +SIN+" balance: " +initialDeposit);
+//		
 		//generate account number
 		index++;
 		this.accountNumber= generateAccountNumber();
@@ -34,4 +34,10 @@ public abstract class Account implements IBaseInterestRate{
 	
 	//common methods
 	
+	public void showInfo() {
+		System.out.println("Account Holder's Name: " +accountHolder+
+				"\nAccount Number: "+accountNumber+ "\nAccount Balance: "
+				+accountBalance
+				);
+	}
 }

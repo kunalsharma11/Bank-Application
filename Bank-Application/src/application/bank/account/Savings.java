@@ -1,21 +1,30 @@
 package application.bank.account;
 
-public class Savings extends Account{
+public class Savings extends Account {
 
-	//specific functionalities of savings account
+	// specific functionalities of savings account
 	int savingsBoxID;
 	int savingsBoxKey;
+
+	// constructor
+	public Savings(String accountHolder, String SIN, double initialDeposit) {
+		super(accountHolder, SIN, initialDeposit);
+		accountNumber = "2" + accountNumber;
+		setSavingsBox();
+
+	}
 	
-		//constructor
-		public Savings(String accountHolder, String SIN, double initialDeposit) {
-			super(accountHolder, SIN, initialDeposit);
-			accountNumber = "2"+accountNumber;
-			System.out.println("acc no. "+accountNumber);
-			System.out.println("" +accountHolder +"'s :New Savings account");
-			System.out.println("\n");
-			
-		}
+	private void setSavingsBox() {
+		savingsBoxID = (int)(Math.random()*Math.pow(10, 3));
+		savingsBoxKey = (int)(Math.random()*Math.pow(10, 4));
+	}
+	// specific methods of savings account
+	public void showInfo() {
+		System.out.println("\nAccount Type: Savings\n");
+		super.showInfo();
+		System.out.println("Account features: "+"\n Savings Box ID is " +savingsBoxID 
+				+"\n Savings Box key is: "+savingsBoxKey);
 		
-		//specific methods of savings account
-	
+	}
+
 }
