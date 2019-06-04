@@ -9,6 +9,8 @@ public class Checking extends Account{
 	//constructor
 	public Checking(String accountHolder, String SIN, double initialDeposit) {
 		super(accountHolder, SIN, initialDeposit);
+		accountNumber = "1"+accountNumber;
+		System.out.println("acc no. "+accountNumber);
 		System.out.println("" +accountHolder +"'s :New Checking account");
 		System.out.println("\n");
 

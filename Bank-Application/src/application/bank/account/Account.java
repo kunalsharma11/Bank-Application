@@ -22,7 +22,6 @@ public abstract class Account implements IBaseInterestRate{
 		//generate account number
 		index++;
 		this.accountNumber= generateAccountNumber();
-		System.out.println("acc no. "+accountNumber);
 		
 	}
 	
