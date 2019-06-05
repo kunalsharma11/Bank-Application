@@ -3,8 +3,9 @@ package application.bank.account;
 public class Savings extends Account {
 
 	// specific functionalities of savings account
-	int savingsBoxID;
-	int savingsBoxKey;
+	private static String accountType = "Savings Account"; 
+	private int savingsBoxID;
+	private int savingsBoxKey;
 
 	// constructor
 	public Savings(String accountHolder, String SIN, double initialDeposit) {
@@ -12,6 +13,11 @@ public class Savings extends Account {
 		accountNumber = "2" + accountNumber;
 		setSavingsBox();
 
+	}
+	
+
+	public void setInterestRate() {
+		interestRate = getBaseInterestRate()-.25;
 	}
 	
 	private void setSavingsBox() {
@@ -25,6 +31,9 @@ public class Savings extends Account {
 		System.out.println("Account features: "+"\n Savings Box ID is " +savingsBoxID 
 				+"\n Savings Box key is: "+savingsBoxKey);
 		
+	}
+	public String toString() {
+		return accountHolder+"'s "+accountType;
 	}
 
 }
